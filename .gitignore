@@ -4,3 +4,4 @@ dist/
 pyqybe.egg-info
 .coverage
 .env
+big_file.txt
