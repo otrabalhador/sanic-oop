@@ -1,17 +1,9 @@
-from sanic.response import json
+import routes
 from app import app
 
 
-@app.route("/<tag:number>", methods=["GET"], host="www.google.com")
-async def test(request, tag):
-    return json(
-        {
-            "hello": tag
-        }
-    )
-
-
 def run():
+    routes.start_routes()
     app.run(host="0.0.0.0", port=8000)
 
 
