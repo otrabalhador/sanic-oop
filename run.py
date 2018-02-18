@@ -2,7 +2,7 @@ from sanic.response import json
 from app import app
 
 
-@app.route("/<tag:number>")
+@app.route("/<tag:number>", methods=["GET"], host="www.google.com")
 async def test(request, tag):
     return json(
         {

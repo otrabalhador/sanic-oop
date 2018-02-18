@@ -1,8 +1,8 @@
 from sanic.handlers import ErrorHandler
-from error_handlers.not_found_handler import Error404Handler
+from error_handler.not_found_handler import Error404Handler
 
 
-class CustomErrorHandler(ErrorHandler):
+class ErrorHandlerCollection(ErrorHandler):
     def __init__(self):
         super().__init__()
         self.handlers_obj = [Error404Handler]

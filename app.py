@@ -1,6 +1,6 @@
 from sanic import Sanic
 
-from error_handlers.error_handlers import CustomErrorHandler
+from error_handler import ErrorHandlerCollection
 
 
 class _SanicApp:
@@ -11,8 +11,8 @@ class _SanicApp:
         reference app.
     """
     def __init__(self):
-        self.__error_handler = CustomErrorHandler()
-        self.__app = Sanic(error_handler=CustomErrorHandler())
+        self.__error_handler = ErrorHandlerCollection()
+        self.__app = Sanic(error_handler=ErrorHandlerCollection())
 
     @property
     def app(self):
