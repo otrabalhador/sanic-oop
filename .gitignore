@@ -1,0 +1,6 @@
+.idea/
+dist/
+*.pyc
+pyqybe.egg-info
+.coverage
+.env
