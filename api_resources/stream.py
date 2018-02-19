@@ -1,4 +1,5 @@
 from sanic import response
+from sanic.exceptions import ServerError
 
 
 async def stream(request):
