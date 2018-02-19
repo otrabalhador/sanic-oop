@@ -8,7 +8,6 @@ async def index(request):
         {
             "hello": "world"
         }
-
     )
 
 
@@ -19,3 +18,8 @@ async def redirect_url(request):
 
 async def post_handler(request, post_id):
     return text('Post - {}'.format(post_id))
+
+
+async def internal_server_error(request):
+    division_by_zero = 1 / 0
+    return text("ok")

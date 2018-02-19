@@ -13,7 +13,13 @@ class ErrorHandlerCollection(ErrorHandler):
     def _get_handlers(self):
         handlers = []
         for handler_obj in self.handlers_obj:
-            handlers.append(
-                handler_obj().get_error_handler()
-            )
+            error_handlers = handler_obj().get_error_handler()
+            self._add_error_handlers(handlers, error_handlers)
         return handlers
+
+    @staticmethod
+    def _add_error_handlers(handlers, error_handlers):
+        if isinstance(error_handlers, list):
+            handlers.extend(error_handlers)
+        else:
+            handlers.append(error_handlers)
