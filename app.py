@@ -12,7 +12,7 @@ class _SanicApp:
     """
     def __init__(self):
         self.__error_handler = ErrorHandlerCollection()
-        self.__app = Sanic(error_handler=ErrorHandlerCollection())
+        self.__app = Sanic(error_handler=self.__error_handler)
 
     @property
     def app(self):
