@@ -1,4 +1,4 @@
-from middlewares.api_middleware import SanicMiddleware
+from middlewares.lib_abstraction.api_middleware import SanicMiddleware
 
 
 class MiddlewareComposite:
@@ -13,9 +13,10 @@ class MiddlewareComposite:
 
     def get_registration_kwargs(self) -> dict():
         middlewares = []
-        for middleware in self.middlewares:
+        for middleware_object in self.middlewares:
+            middleware_instance = middleware_object()
             middlewares.append({
-                self.MIDDLEWARE: middleware.middleware,
-                self.ATTACH_TO: middleware.attach_to
+                self.MIDDLEWARE: middleware_instance.middleware,
+                self.ATTACH_TO: middleware_instance.attach_to
             })
         return middlewares

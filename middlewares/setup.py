@@ -1,13 +1,10 @@
-from middlewares.middleware_composite import MiddlewareComposite
-from middlewares.print_on_request import PrintOnRequestMiddleware
-from middlewares.print_on_response import PrintOnResponseMiddleware
+from middlewares.lib_abstraction.middleware_composite import MiddlewareComposite
 
 
 class SetupMiddlewares:
-    def __init__(self, app):
+    def __init__(self, app, middleware_objects):
         self.app = app
-        middleware_instances = [PrintOnResponseMiddleware(), PrintOnRequestMiddleware()]
-        self.middleware_composite = MiddlewareComposite(middleware_instances)
+        self.middleware_composite = MiddlewareComposite(middleware_objects)
 
     def setup_middlewares(self):
         for middleware_kwargs in self.middleware_composite.get_registration_kwargs():

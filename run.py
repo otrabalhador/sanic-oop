@@ -8,7 +8,7 @@ from app import app
 def run():
     debug = True if os.getenv("DEBUG", False) else False
     routes.start_routes()
-    middlewares.SetupMiddlewares(app).setup_middlewares()
+    middlewares.SetupMiddlewares(app, middlewares.middleware_objects).setup_middlewares()
     app.run(host="0.0.0.0", port=8000, debug=debug)
 
 
