@@ -13,7 +13,7 @@ class ErrorHandlerCollection(ErrorHandler):
     def _get_handlers(self):
         handlers = []
         for handler_obj in self.handlers_obj:
-            error_handlers = handler_obj().get_error_handler()
+            error_handlers = handler_obj().get_error_handlers()
             self._add_error_handlers(handlers, error_handlers)
         return handlers
 

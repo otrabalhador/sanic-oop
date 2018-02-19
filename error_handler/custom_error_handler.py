@@ -19,7 +19,7 @@ for request url: %s\
                              self.status_code,
                              self.headers)
 
-    def get_error_handler(self) -> list:
+    def get_error_handlers(self) -> list:
         if isinstance(self.exceptions, list):
             return [(exception, self.handler,) for exception in self.exceptions]
         return [(self.exceptions, self.handler,)]
