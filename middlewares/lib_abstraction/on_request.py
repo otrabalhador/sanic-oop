@@ -9,6 +9,8 @@ class OnRequestMiddleware(SanicMiddleware):
             request is invalid
         ii) alter request:
             You can change any attribute of sanic request.
+        iii) respond early:
+            You can do this by returning a sanic.response object on middleware classmethod
 
         Check the implementation:
             - request object: sanic.request.Request

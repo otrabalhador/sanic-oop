@@ -13,7 +13,11 @@ class OnResponseMiddleware(SanicMiddleware):
             response is invalid
         iii) alter response:
             You can change any attribute of sanic's response.
-        * you can also alter request, but it will be ineficient, since the request was already processed
+        iv) respond early:
+            You can do this by returning a sanic.response object on middleware classmethod
+            Why does this matter on a middleware response interceptor?
+            I don't know. But this feature is available!
+        * you can also alter request, but it will be inefficient, since the request was already processed
 
 
         Check the implementation:
