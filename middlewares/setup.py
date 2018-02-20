@@ -1,7 +1,7 @@
 from middlewares.lib_abstraction.middleware_composite import MiddlewareComposite
 
 
-class SetupMiddlewares:
+class MiddlewareSetup:
     def __init__(self, app, middleware_objects):
         self.app = app
         self.middleware_composite = MiddlewareComposite(middleware_objects)
