@@ -1,6 +1,7 @@
 import middlewares
 import routes
 from listeners import ListenerSetup, ListenerCollection
+from tasks import SanicTaskCollection, SanicTaskSetup
 
 
 class SanicAppSetup:
@@ -11,6 +12,7 @@ class SanicAppSetup:
         self._setup_routes()
         self._setup_middlewares()
         self._setup_listeners()
+        self._setup_tasks()
 
     def _setup_routes(self):
         routes.start_routes(self.__app)
@@ -21,3 +23,7 @@ class SanicAppSetup:
     def _setup_listeners(self):
         listeners = ListenerCollection().listeners
         ListenerSetup(self.__app, listeners).setup_listeners()
+
+    def _setup_tasks(self):
+        tasks = SanicTaskCollection().tasks
+        SanicTaskSetup(self.__app, tasks).setup()
