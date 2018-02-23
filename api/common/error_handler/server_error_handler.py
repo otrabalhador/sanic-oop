@@ -17,7 +17,7 @@ class ServerErrorResponse:
 """
 
 
-class ServerErrorHander(CustomErrorHandler):
+class ServerErrorHandler(CustomErrorHandler):
     def __init__(self):
         response = ServerErrorResponse()
         super().__init__(exceptions=[exceptions.ServerError, Exception],

@@ -1,3 +1,4 @@
-from sanic_oop.error_handler.error_handler import ErrorHandlerCollection
+from api.common.error_handler.not_found_handler import Error404Handler
+from api.common.error_handler.server_error_handler import ServerErrorHandler
 
-__all__ = [ErrorHandlerCollection]
+error_handlers = [Error404Handler, ServerErrorHandler]

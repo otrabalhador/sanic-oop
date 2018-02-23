@@ -1,13 +1,10 @@
 from sanic.handlers import ErrorHandler
 
-from api.common.error_handler.not_found_handler import Error404Handler
-from api.common.error_handler.server_error_handler import ServerErrorHander
-
 
 class ErrorHandlerCollection(ErrorHandler):
-    def __init__(self):
+    def __init__(self, error_handlers):
         super().__init__()
-        self.handlers_obj = [Error404Handler, ServerErrorHander]
+        self.handlers_obj = error_handlers
         self.handlers = self._get_handlers()
 
     def _get_handlers(self):
