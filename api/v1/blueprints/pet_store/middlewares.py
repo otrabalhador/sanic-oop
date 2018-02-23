@@ -1,0 +1,2 @@
+class PetStoreMiddlewares:
+    pass

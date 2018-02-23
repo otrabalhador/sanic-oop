@@ -1,5 +1,5 @@
-from api_resources.basic import BasicResources
-from api_resources.stream import StreamResource
+from api_old.basic import BasicResources
+from api_old.stream import StreamResource
 
 version = "v1"
 

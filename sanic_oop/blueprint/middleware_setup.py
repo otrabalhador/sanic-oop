@@ -1,0 +1,2 @@
+class BlueprintMiddlewareSetup:
+    pass
