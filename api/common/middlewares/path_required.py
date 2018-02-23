@@ -1,6 +1,6 @@
 from sanic.exceptions import InvalidUsage
 
-from middlewares.lib_abstraction.on_request import OnRequestMiddleware
+from sanic_oop.middlewares.on_request import OnRequestMiddleware
 
 
 class ForbiddenQueryString(OnRequestMiddleware):

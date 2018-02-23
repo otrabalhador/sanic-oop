@@ -1,4 +1,4 @@
-from middlewares.lib_abstraction.middleware_composite import MiddlewareComposite
+from sanic_oop.middlewares.middleware_composite import MiddlewareComposite
 
 
 class MiddlewareSetup:

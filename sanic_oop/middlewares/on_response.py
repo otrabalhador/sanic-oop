@@ -1,4 +1,4 @@
-from middlewares.lib_abstraction.api_middleware import SanicMiddleware
+from sanic_oop.middlewares.api_middleware import SanicMiddleware
 
 
 class OnResponseMiddleware(SanicMiddleware):

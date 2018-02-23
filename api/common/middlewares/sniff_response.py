@@ -1,4 +1,4 @@
-from middlewares.lib_abstraction.on_response import OnResponseMiddleware
+from sanic_oop.middlewares.on_response import OnResponseMiddleware
 
 
 class SniffResponse(OnResponseMiddleware):

@@ -1,7 +1,7 @@
 from sanic.handlers import ErrorHandler
 
-from error_handler.not_found_handler import Error404Handler
-from error_handler.server_error_handler import ServerErrorHander
+from api.common.error_handler.not_found_handler import Error404Handler
+from api.common.error_handler.server_error_handler import ServerErrorHander
 
 
 class ErrorHandlerCollection(ErrorHandler):

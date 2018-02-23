@@ -1,11 +1,15 @@
 from sanic import Sanic
 from sanic_cors import CORS
 from sanic_openapi import swagger_blueprint, openapi_blueprint
+
 from api import blueprints
-import middlewares
-import routes
-from listeners import ListenerSetup, ListenerCollection
+from api.common import middlewares
+from api.common.listeners import ListenerSetup
+from api.common.listeners import ListenerCollection
+from api.v1.app import routes
+from sanic_oop.middlewares.setup import MiddlewareSetup
 from tasks import SanicTaskCollection, SanicTaskSetup
+
 
 class SanicAppSetup:
     def __init__(self, app: Sanic):
@@ -32,7 +36,7 @@ class SanicAppSetup:
         routes.start_routes(self.__app)
 
     def _setup_middlewares(self):
-        middlewares.MiddlewareSetup(self.__app, middlewares.middleware_objects).setup_middlewares()
+        MiddlewareSetup(self.__app, middlewares.middleware_objects).setup_middlewares()
 
     def _setup_listeners(self):
         listeners = ListenerCollection().listeners

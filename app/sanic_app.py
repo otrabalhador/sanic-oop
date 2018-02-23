@@ -1,7 +1,7 @@
 from sanic import Sanic
 
 from app.setup import SanicAppSetup
-from error_handler import ErrorHandlerCollection
+from api.common.error_handler import ErrorHandlerCollection
 
 
 class _SanicApp:
