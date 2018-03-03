@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/otrabalhador/sanic-oop.svg?branch=master)](https://travis-ci.org/otrabalhador/sanic-oop)
+
 # Sanic OOP
 
 Lib for developing web applications with sanic using python Object Oriented programming.
