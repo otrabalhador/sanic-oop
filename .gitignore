@@ -8,3 +8,5 @@ big_file.txt
 sanic_oop.egg-info/
 
 build/
+
+.tox/
