@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/otrabalhador/sanic-oop.svg?branch=master)](https://travis-ci.org/otrabalhador/sanic-oop)
+[![Build Status](https://travis-ci.org/otrabalhador/sanic-oop.svg?branch=master)](https://travis-ci.org/otrabalhador/sanic-oop) [![Coverage Status](https://coveralls.io/repos/github/otrabalhador/sanic-oop/badge.svg?branch=master)](https://coveralls.io/github/otrabalhador/sanic-oop?branch=master)
 
 # Sanic OOP
 
@@ -38,7 +38,9 @@ if __name__ == "__main__":
 * Check it out the [sanic_boilerplate]
 
 ## Requirements
-- **python** >= 3.5.3
+- python:
+    - 3.5
+    - 3.6
 - sanic==0.7.0
 
 
