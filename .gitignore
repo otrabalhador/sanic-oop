@@ -10,3 +10,5 @@ sanic_oop.egg-info/
 build/
 
 .tox/
+
+.eggs/

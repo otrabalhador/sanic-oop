@@ -1,7 +1,7 @@
-from sanic_oop.middlewares.api_middleware import SanicMiddleware
+from sanic_oop.middlewares.api_middleware import SanicOOPMiddleware
 
 
-class OnRequestMiddleware(SanicMiddleware):
+class OnRequestMiddleware(SanicOOPMiddleware):
     """
         Use this to intercept request. You may want to:
         i) check and do something
@@ -17,7 +17,7 @@ class OnRequestMiddleware(SanicMiddleware):
     """
     attach_to = "request"
 
-    def __init__(self, middleware: classmethod):
+    def __init__(self, middleware):
         super().__init__(middleware, self.attach_to)
 
     @staticmethod

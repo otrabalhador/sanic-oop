@@ -1,7 +1,10 @@
+from sanic_oop import OnRequestMiddleware, OnResponseMiddleware
 from sanic_oop.middlewares.middleware_composite import MiddlewareComposite
 
 
 class MiddlewareSetup:
+    SETUP_OBJECT_TYPE = [OnRequestMiddleware, OnResponseMiddleware]
+
     def __init__(self, app, middleware_objects):
         self.app = app
         self.middleware_composite = MiddlewareComposite(middleware_objects)

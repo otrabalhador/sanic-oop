@@ -1,4 +1,4 @@
-from sanic_oop.middlewares.api_middleware import SanicMiddleware
+from sanic_oop.middlewares.api_middleware import SanicOOPMiddleware
 
 
 class MiddlewareComposite:
@@ -8,7 +8,7 @@ class MiddlewareComposite:
     def __init__(self, middlewares: list):
         self.middlewares = middlewares
 
-    def add(self, middleware: SanicMiddleware):
+    def add(self, middleware: SanicOOPMiddleware):
         self.middlewares.append(middleware)
 
     def get_registration_kwargs(self) -> dict():

@@ -1,7 +1,7 @@
-from sanic_oop.middlewares.api_middleware import SanicMiddleware
+from sanic_oop.middlewares.api_middleware import SanicOOPMiddleware
 
 
-class OnResponseMiddleware(SanicMiddleware):
+class OnResponseMiddleware(SanicOOPMiddleware):
     """
         Use this to intercept after processing of request (before returning response to user).
         You may want to:
